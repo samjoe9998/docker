@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: demo
+      MYSQL_DATABASE: demo
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: demo
+    ports:
+    - 3306:3306
+    volumes:
+    - db_data:/var/lib/mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+    - 8080:8080
+volumes:
+  db_data: null
