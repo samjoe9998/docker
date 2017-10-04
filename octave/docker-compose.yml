@@ -1,0 +1,7 @@
+version: '3.1'
+services:
+  db:
+    image: epflsti/octave-x11-novnc-docker:latest
+    restart: always
+    ports:
+    - 8083:8083
